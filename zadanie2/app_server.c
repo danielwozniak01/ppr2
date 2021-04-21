@@ -19,7 +19,7 @@ obliczenia_1_svc(wejscie *argp, struct svc_req *rqstp)
     for (int i = 0, j = 0; j < strlen(argp->dane_wej); ++i, j += 2) {
         sprintf(result.dane_wyj+j,"%02x", argp->dane_wej[i] & 0xff);
     }
-    printf("Hex:%s",result.dane_wyj);
+    printf("Hex:%s\n",result.dane_wyj);
     
 
 	return &result;
